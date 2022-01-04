@@ -24,7 +24,7 @@ public class AdminController {
 		return re;
 	}
 	@PutMapping(path="/updateAdmin")
-	public ResponseEntity<Admin> updateCoder(@RequestBody Admin e) throws Throwable
+	public ResponseEntity<Admin> updateAdmin(@RequestBody Admin e) throws Throwable
 	{
 		Admin e1=adminservice.updateAdmin(e);
 		
@@ -33,7 +33,7 @@ public class AdminController {
 	}
 	
 	@DeleteMapping(path="/deleteAdmin")
-	public ResponseEntity<String> deleteCoder(@RequestBody Admin e)
+	public ResponseEntity<String> deleteAdmin(@RequestBody Admin e)
 	{
 		adminservice.deleteAdmin(e);
 		ResponseEntity re=new ResponseEntity<String>("Deleted",HttpStatus.OK);
